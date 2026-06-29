@@ -1,0 +1,176 @@
+import { StyleSheet, Dimensions } from 'react-native';
+
+const { height } = Dimensions.get('window');
+
+export default StyleSheet.create({
+  contenedor: { flex: 1 },
+  mapa: { ...StyleSheet.absoluteFillObject },
+
+  buscador: {
+    position: 'absolute',
+    top: 50,
+    left: 16,
+    right: 16,
+    zIndex: 10,
+  },
+  barraBusqueda: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+    borderRadius: 12,
+    paddingHorizontal: 16,
+    elevation: 5,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 4,
+  },
+  inputBusqueda: { flex: 1, height: 48, fontSize: 16, color: '#333' },
+  spinnerBusqueda: { marginLeft: 8 },
+  resultados: {
+    backgroundColor: '#fff',
+    borderRadius: 12,
+    marginTop: 4,
+    maxHeight: 250,
+    elevation: 5,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.15,
+    shadowRadius: 4,
+  },
+  itemResultado: {
+    paddingHorizontal: 16,
+    paddingVertical: 12,
+    borderBottomWidth: 0.5,
+    borderBottomColor: '#eee',
+  },
+  textoResultado: { fontSize: 14, color: '#333' },
+
+  barraInfo: {
+    position: 'absolute',
+    top: 108,
+    alignSelf: 'center',
+    backgroundColor: 'rgba(0,0,0,0.65)',
+    paddingHorizontal: 16,
+    paddingVertical: 6,
+    borderRadius: 10,
+  },
+  textoInfo: { color: '#fff', fontSize: 13 },
+
+  botonUbicacion: {
+    position: 'absolute',
+    right: 16,
+    bottom: 330,
+    backgroundColor: '#fff',
+    width: 44,
+    height: 44,
+    borderRadius: 22,
+    alignItems: 'center',
+    justifyContent: 'center',
+    elevation: 4,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 4,
+  },
+  iconoUbicacion: { fontSize: 20 },
+
+  fondo: {
+    position: 'absolute',
+    bottom: 30,
+    left: 16,
+    right: 16,
+    alignItems: 'center',
+    gap: 8,
+  },
+  botonGps: { paddingHorizontal: 24, paddingVertical: 10, borderRadius: 25 },
+  textoBotonGps: { color: '#fff', fontSize: 15, fontWeight: '600' },
+
+  barraModos: {
+    flexDirection: 'row',
+    backgroundColor: 'rgba(0,0,0,0.75)',
+    borderRadius: 25,
+    padding: 4,
+  },
+  botonModo: { paddingHorizontal: 14, paddingVertical: 10, borderRadius: 22 },
+  textoModo: { color: '#ccc', fontSize: 13, fontWeight: '600' },
+  textoModoActivo: { color: '#fff' },
+
+  botonRadio: {
+    paddingHorizontal: 12,
+    paddingVertical: 4,
+    borderRadius: 6,
+    backgroundColor: 'rgba(255,255,255,0.15)',
+  },
+  botonRadioActivo: { backgroundColor: '#FF3B30' },
+  textoRadio: { color: '#ccc', fontSize: 12 },
+  textoRadioActivo: { color: '#fff', fontWeight: '600' },
+
+  overlay: {
+    flex: 1,
+    backgroundColor: 'rgba(0,0,0,0.5)',
+    justifyContent: 'flex-end',
+  },
+  modal: {
+    backgroundColor: '#1c1c1e',
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+    padding: 20,
+    maxHeight: height * 0.55,
+  },
+  cabeceraModal: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 16,
+  },
+  tituloModal: { color: '#fff', fontSize: 20, fontWeight: 'bold' },
+  botonCerrar: { color: '#999', fontSize: 22, padding: 4 },
+  vacio: { color: '#666', textAlign: 'center', fontSize: 16, marginVertical: 30 },
+
+  itemLista: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingVertical: 14,
+    borderBottomWidth: 0.5,
+    borderBottomColor: '#333',
+  },
+  contenidoItem: { flex: 1, marginRight: 12 },
+  tituloItem: { color: '#fff', fontSize: 16 },
+  subtituloItem: { color: '#999', fontSize: 12, marginTop: 2 },
+  botonEliminar: { fontSize: 18, padding: 4 },
+
+  contenedorRuta: {
+    flexDirection: 'row',
+    gap: 12,
+    alignItems: 'center',
+  },
+  textoPuntos: { color: '#fff' },
+  botonObtenerRuta: {
+    backgroundColor: '#34C759',
+    paddingHorizontal: 16,
+    paddingVertical: 6,
+    borderRadius: 8,
+  },
+  textoObtenerRuta: { color: '#fff', fontWeight: '600' },
+  textoLimpiarRuta: { color: '#FF6B6B' },
+
+  contenedorRadio: {
+    flexDirection: 'row',
+    gap: 6,
+    alignItems: 'center',
+  },
+  textoRadioActual: { color: '#fff', fontSize: 12 },
+
+  filaAcciones: { flexDirection: 'row', gap: 12 },
+  botonAccion: {
+    backgroundColor: 'rgba(0,0,0,0.6)',
+    paddingHorizontal: 20,
+    paddingVertical: 8,
+    borderRadius: 20,
+  },
+  botonAccionRojo: { backgroundColor: 'rgba(255,59,48,0.2)' },
+  textoAccion: { color: '#fff', fontSize: 14 },
+  textoAccionRojo: { color: '#FF3B30' },
+});
